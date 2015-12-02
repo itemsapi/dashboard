@@ -50,6 +50,24 @@ server {
 
 Currently it is a basic installation version of Dashboard. Later there will be added instructions how to compile it with grunt and use for production purposes.
 
+## Configuration and Run
+
+- to change your backend URL to your own go to `app/scripts/app.js` and change `baseUrl` (you can use demo url http://cloud.itemsapi.com/api/v1)
+- to run application open http://dashboard.cms/app in the browser
+
 ## Demo
 
 - http://app.itemsapi.com/
+
+## Contribution
+
+This is early stage of the dashboard. There is still lot of works, improvements. If you want to help you can:
+
+- ask for new feature
+- make code review and suggest improvements
+- share your ideas
+- add new pull requests
+
+## License
+
+ItemsAPI dashboard is licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
