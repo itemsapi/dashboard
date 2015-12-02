@@ -15,27 +15,27 @@
     <div class="row">
         <div class="col-sm-12">
             <h5 class="subtitle mb5">DEMO Collections</h5>
-            <div class="table-responsive">
-                <table class="table mb30">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Count</th>
-                            <th>All items</th>
-                            <!--<th>Mapping</th>-->
+            <div class="box">
+                <div class="box-body table-responsive no-padding">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Count</th>
+                                <th>All items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in rows">
+                            <td><a href="" ui-sref="documents({ name: row.name })">{{ row.display_name }}</a></td>
+                            <td>{{ row.count | number }}</td>
+                            <td>
+                                <a href="" ui-sref="documents({ name: row.name })">View</a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="row in rows">
-                        <td><a href="" ui-sref="documents({ name: row.name })">{{ row.display_name }}</a></td>
-                        <td>{{ row.count | number }}</td>
-                        <td>
-                            <a href="" ui-sref="documents({ name: row.name })">View</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <!--<div class="dataTables_info" id="table2_info">All elements: {{ pagination.total }}</div>-->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -43,19 +43,20 @@
     <div class="row">
         <div class="col-sm-12">
             <h5 class="subtitle">Your collections</h5>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Count</th>
-                            <th>All items</th>
-                            <!--<th>Mapping</th>-->
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+            <div class="box">
+                <div class="box-body table-responsive no-padding">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Count</th>
+                                <th>All items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <button type="button" class="btn btn-primary disabled">Add new collection</button>
         </div>
