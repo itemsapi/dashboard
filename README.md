@@ -48,6 +48,8 @@ server {
 }
 ```
 
+Currently it is a basic installation version of Dashboard. Later there will be added instructions how to compile it with grunt and use for production purposes.
+
 ## Demo
 
 - http://app.itemsapi.com/
