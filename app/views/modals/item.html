@@ -1,0 +1,21 @@
+<div class="table-responsive">
+    <table class="table mb30">
+        <thead>
+            <tr>
+                <th>
+                    Key
+                </th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="(key, val) in item">
+            <td>
+                {{ key }}
+            </td>
+            <td ng-style="val.length > 1000 && {'white-space': 'pre'}" style="">
+                {{ val }}
+            </td>
+        </tr>
+        </tbody>
+    </table>

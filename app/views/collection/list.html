@@ -1,0 +1,64 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Collections
+        <small>list of all collections</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Collections</a></li>
+        <li class="active"></li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5 class="subtitle mb5">DEMO Collections</h5>
+            <div class="table-responsive">
+                <table class="table mb30">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Count</th>
+                            <th>All items</th>
+                            <!--<th>Mapping</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="row in rows">
+                        <td><a href="" ui-sref="documents({ name: row.name })">{{ row.display_name }}</a></td>
+                        <td>{{ row.count | number }}</td>
+                        <td>
+                            <a href="" ui-sref="documents({ name: row.name })">View</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--<div class="dataTables_info" id="table2_info">All elements: {{ pagination.total }}</div>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h5 class="subtitle">Your collections</h5>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Count</th>
+                            <th>All items</th>
+                            <!--<th>Mapping</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="btn btn-primary disabled">Add new collection</button>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

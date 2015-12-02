@@ -1,0 +1,39 @@
+{
+  "name": "itemsapi-dashboard",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "angular-base64": "~2.0.1",
+    "angular-bluebird-promises": "~0.5.3",
+    "angular-bootstrap": "~0.13.4",
+    "angular-bootstrap-datetimepicker": "~0.2.2",
+    "angular-cookies": "~1.4.5",
+    "angular-moment": "~0.10.3",
+    "angular-order-object-by": "~1.2.1",
+    "angular-resource": "1.2.12",
+    "angular-route": "1.2.6",
+    "angular-sanitize": "1.2.12",
+    "angular-ui-router": "~0.2.15",
+    "angularjs-geolocation": "~0.1.1",
+    "checklist-model": "~0.6.0",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.9.0",
+    "json3": "~3.2.6",
+    "lodash": "~3.10.1",
+    "ngQuickDate": "~1.2.10",
+    "restangular": "1.2.2",
+    "textAngular": "~1.4.5",
+    "ui.bootstrap": "0.10.0",
+    "underscore": "~1.8.3",
+    "AdminLTE": "admin-lte#~2.3.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.6",
+    "angular-scenario": "1.2.6"
+  },
+  "resolutions": {
+    "angular": "~1.4.5",
+    "lodash": "~3.10.1"
+  }
+}
