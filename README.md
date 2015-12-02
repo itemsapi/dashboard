@@ -11,6 +11,12 @@ ItemsAPI dashboard is fast angular.js web application for managing items and dem
 
 ## Installation (ubuntu 14.04)
 
+Clone ItemsAPI Dashboard repository from github:
+
+```bash
+$ git clone https://github.com/itemsapi/dashboard.git
+```
+
 Node.js:
 ```bash
 $ sudo apt-get install curl
