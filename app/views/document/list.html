@@ -74,7 +74,8 @@
 
                     <div class="mb20"></div>
 
-                    <div class="table-responsive">
+                    <div class="box"> 
+                    <div class="box-body table-responsive">
                         <table class="table mb30">
                             <thead>
                                 <tr>
@@ -112,23 +113,24 @@
                         <!--<pagination class="pagination-sm" rotate="false" boundary-links="false" ng-model="pagination.page" total-items="pagination.count" items-per-page="pagination.limit" page="pagination.page"></pagination>-->
                         <pagination total-items="pagination.count" ng-model="pagination.page" class="pagination-md" ng-change="setPage(page)" boundary-links="true" rotate="true" items-per-page="pagination.limit" page="pagination.page" max-size="5"></pagination>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-btns">
-                                <a href="" class="panel-close">×</a>
-                                <a href="" class="minimize">−</a>
-                            </div><!-- panel-btns -->
-                            <h3 class="panel-title">API Request - developer panel</h3>
-                        </div>
-                        <div class="panel-body" style="display: block;">
+                    </div>
 
-                            <code>GET /api/v1/{{ name }}/find</code><br />
 
-                            <!--{{ explainQuery }}-->
-                            <span ng-repeat="(key, val) in explainQuery">
-                                <code>{{ key }}={{val}}</code><br />
-                            </span>
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="" data-toggle="tab" aria-expanded="true">Http request</a></li>
+                            <li><a href="" aria-expanded="false">Node.js</a></li>
+                            <li><a href="">Angular.js</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <code>GET /api/v1/{{ name }}</code><br />
+                                <span ng-repeat="(key, val) in explainQuery">
+                                    <code>{{ key }}={{val}}</code><br />
+                                </span>
+                            </div>
                         </div>
+                        <!-- /.tab-content -->
                     </div>
                 </div>
             </div>
