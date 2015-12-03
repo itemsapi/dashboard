@@ -134,15 +134,26 @@ angular.module('itemsapi')
 
   $scope.showItem = function (index) {
     var modalInstance = $modal.open({
-      templateUrl: 'views/modals/item.html',
+      templateUrl: 'views/modals/show-item.html',
       controller: 'ModalInstanceCtrl',
       size: 'lg',
       resolve: {
         item: function() {
-          console.log(index);
-          console.log($scope.rows[index]);
           return $scope.rows[index];
-        },
+        }
+      }
+    });
+  };
+
+  $scope.editItem = function (index) {
+    var modalInstance = $modal.open({
+      templateUrl: 'views/modals/edit-item.html',
+      controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        item: function() {
+          return $scope.rows[index];
+        }
       }
     });
   };
@@ -150,10 +161,14 @@ angular.module('itemsapi')
 
 });
 
-angular.module('itemsapi').controller('ModalInstanceCtrl', function ($scope, $modalInstance, item) {
-
-  console.log(item);
+angular.module('itemsapi').controller('ModalInstanceCtrl', function ($scope, $modalInstance, item, $timeout) {
   $scope.item = item;
+  $scope.item2 = JSON.stringify(item, null, 4);
+
+  $scope.codemirrorLoaded = function(_editor){
+    _editor.focus();
+    _editor.refresh();
+  };
 
   $scope.ok = function () {
     $modalInstance.close($scope.selected.item);
@@ -162,5 +177,11 @@ angular.module('itemsapi').controller('ModalInstanceCtrl', function ($scope, $mo
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
+
+  $modalInstance.opened.then(function (selectedItem) {
+    $timeout(function() {
+      $scope.isRefreshed = true;
+    }, 10);
+  });
 
 });

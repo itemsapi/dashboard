@@ -16,6 +16,7 @@ angular.module('itemsapi', [
   'ngQuickDate',
   'geolocation',
   'ngOrderObjectBy',
+  'ui.codemirror',
   'ui.bootstrap.datetimepicker'
 ])
 .constant('APP', {'baseUrl': 'http://localhost:3000/api/v1', 'suffix': '' })
