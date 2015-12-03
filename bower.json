@@ -26,7 +26,8 @@
     "textAngular": "~1.4.5",
     "ui.bootstrap": "0.10.0",
     "underscore": "~1.8.3",
-    "AdminLTE": "admin-lte#~2.3.2"
+    "AdminLTE": "admin-lte#~2.3.2",
+    "angular-ui-codemirror": "~0.3.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

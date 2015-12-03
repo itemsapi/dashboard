@@ -101,6 +101,7 @@
                                     <a ng-click="showItem(index)" style="cursor: pointer;">View</a>
                                 </td>
                                 <td>
+                                    <a ng-click="editItem(index)" style="cursor: pointer;">Edit</a>
                                 </td>
                                 <td>
                                     <a ng-click="removeItem(index)" style="cursor: pointer;">Delete</a>
@@ -114,7 +115,6 @@
                         <pagination total-items="pagination.count" ng-model="pagination.page" class="pagination-md" ng-change="setPage(page)" boundary-links="true" rotate="true" items-per-page="pagination.limit" page="pagination.page" max-size="5"></pagination>
                     </div>
                     </div>
-
 
                     <div class="nav-tabs-custom">
                         <ul class="nav nav-tabs">
