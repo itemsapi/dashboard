@@ -21,6 +21,7 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Project</th>
                                 <th>Count</th>
                                 <th>All items</th>
                             </tr>
@@ -28,6 +29,7 @@
                         <tbody>
                         <tr ng-repeat="row in rows">
                             <td><a href="" ui-sref="documents({ name: row.name })">{{ row.display_name }}</a></td>
+                            <td>{{ row.project }}</td>
                             <td>{{ row.count | number }}</td>
                             <td>
                                 <a href="" ui-sref="documents({ name: row.name })">View</a>
