@@ -5,9 +5,6 @@ ItemsAPI dashboard is fast angular.js web application for managing items and dem
 ## Requirement
 
 - node.js
-- grunt
-- bower
-- nginx
 
 ## Heroku installation
 
