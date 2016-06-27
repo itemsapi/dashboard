@@ -1,0 +1,14 @@
+{
+    "name": "ItemsAPI angular dashboard",
+    "description": "ItemsAPI is an open source full text search api",
+    "website": "http://www.itemsapi.com",
+    "success_url": "/",
+    "addons": ["searchbox"],
+    "env": {
+        "NODE_ENV": "production",
+        "PORT": "3000"
+    },
+    "logo": "https://pbs.twimg.com/profile_images/676506434629074946/FVScyObD.jpg",
+    "repository": "https://github.com/itemsapi/dashboard",
+    "keywords": ["itemsapi", "angular.js", "analytics", "elasticsearch", "node.js", "restful search api"]
+}

@@ -107,9 +107,9 @@ angular.module('itemsapi')
     ));
   }
 
-  var metadataApi = Restangular.one(name + '/metadata');
-  metadataApi.get().then(function(data) {
-      $scope.metadata = data.metadata;
+  $http.get('/metadata?name=' + name).then(function(res) {
+    $scope.metadata = res.data;
+  }, function(err) {
   });
 
   $scope.setPage = function(page) {

@@ -6,12 +6,31 @@ angular.module('itemsapi')
   $scope.rows = [];
 
   var api = Restangular.all('collections');
-  api.getList({}).then(function(data) {
-    $scope.rows = data.data.items;
-    $scope.pagination = data.pagination;
-  });
+  var updateCollections = function() {
+    api.getList({}).then(function(data) {
+      $scope.rows = data.data.items;
+      $scope.pagination = data.pagination;
+    });
+  }
+
+  updateCollections()
 
   $scope.animationsEnabled = true;
+
+  $scope.collection = {}
+
+  $scope.submit = function () {
+    console.log($scope.collection);
+
+    var body = $scope.collection
+
+    $http.post('/add-data', body, {}).then(function(res) {
+      updateCollections()
+      console.log(res);
+    }, function(err) {
+      console.log(err);
+    });
+  }
 
   $scope.showMapping = function (name, size) {
 
@@ -39,7 +58,6 @@ angular.module('itemsapi')
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
-
 
 });
 
