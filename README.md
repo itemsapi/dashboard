@@ -9,6 +9,10 @@ ItemsAPI dashboard is fast angular.js web application for managing items and dem
 - bower
 - nginx
 
+## Heroku installation
+
+<a target="_blank" href="https://heroku.com/deploy?template=https://github.com/itemsapi/dashboard"><img src="https://camo.githubusercontent.com/c0824806f5221ebb7d25e559568582dd39dd1170/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e706e67" alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.png"></a>
+
 ## Installation (ubuntu 14.04)
 
 Clone ItemsAPI Dashboard repository from github:
@@ -25,41 +29,17 @@ $ sudo apt-get install -y nodejs
 $ sudo npm update npm -g
 ```
 
-npm packages:
-```bash
-$ sudo npm install bower -g
-$ sudo npm install grunt-cli -g
-```
-
 local npm packages (in your project directory):
+it will install bower packages as well
 ```bash
-$ sudo npm install
+$ npm install --production
 ```
-
-install bower packages (angular, templates, etc):
-```bash
-$ bower install
-```
-
-Nginx configuration (basic version):
-```nginx
-server {
-	listen   80; 
-    server_name dashboard.cms;
-
-    location ^~ /app {
-        expires 0;
-        root   /var/www/itemsapi-dashboard/;
-    }
-}
-```
-
-Currently it is a basic installation version of Dashboard. Later there will be added instructions how to compile it with grunt and use for production purposes.
 
 ## Configuration and Run
 
-- to change your backend URL to your own go to `app/scripts/app.js` and change `baseUrl` (you can use demo url http://cloud.itemsapi.com/api/v1)
-- to run application open http://dashboard.cms/app in the browser
+```bash
+$ npm start
+```
 
 ## Demo
 
@@ -69,7 +49,6 @@ Currently it is a basic installation version of Dashboard. Later there will be a
 
 This is early stage of the dashboard. There is still lot of works, improvements. If you want to help you can:
 
-- ask for new feature
 - make code review and suggest improvements
 - share your ideas
 - add new pull requests
