@@ -19,7 +19,8 @@ angular.module('itemsapi', [
   'ui.codemirror',
   'ui.bootstrap.datetimepicker'
 ])
-.constant('APP', {'baseUrl': 'http://localhost:3000/api/v1', 'suffix': '' })
+//.constant('APP', {'baseUrl': 'http://localhost:3000/api/v1', 'suffix': '' })
+.constant('APP', {'baseUrl': '/api/v1', 'suffix': '' })
 
 .config(function (APP, RestangularProvider, $base64, $locationProvider, $stateProvider, $urlRouterProvider, $httpProvider, $urlMatcherFactoryProvider) {
 

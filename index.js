@@ -52,7 +52,8 @@ app.all('*', function(req, res, next) {
 })
 
 app.get('/', function(req, res) {
-  return res.sendFile(path.join(__dirname+ '/app/index.html'));
+  res.redirect('/app');
+  //return res.sendFile(path.join(__dirname+ '/app/index.html'));
 });
 
 app.post('/add-data', function(req, res) {

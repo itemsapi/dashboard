@@ -20,12 +20,13 @@ angular.module('itemsapi')
   $scope.collection = {}
 
   $scope.submit = function () {
-    console.log($scope.collection);
-
     var body = $scope.collection
 
     $http.post('/add-data', body, {}).then(function(res) {
-      updateCollections()
+      $timeout(function() {
+        $state.go('documents', {name: res.data.name}, {location: 'replace'})
+      }, 1000);
+
       console.log(res);
     }, function(err) {
       console.log(err);
