@@ -11,11 +11,6 @@ if (process.env.SEARCHBOX_URL) {
 
 var PORT = process.env.PORT || 3000;
 
-console.log(PORT);
-console.log(ELASTICSEARCH_URL);
-console.log(__dirname);
-
-
 itemsapi.init({
   server: {
     port: PORT,
@@ -35,9 +30,6 @@ var app = itemsapi.get('express');
 var path = require('path')
 var _ = require('lodash')
 var ui = require('./src/helpers/ui')
-//var ItemsAPI = require('itemsapi-node');
-
-var ITEMSAPI_URL = 'http://localhost:4000/api/v1';
 
 app.use('/app', express.static('app'));
 
@@ -59,9 +51,12 @@ app.get('/', function(req, res) {
 });
 
 app.post('/add-data', function(req, res) {
-  /*return req.client.createProject({
-    url: req.body.url
-  })*/
+  if (req.body.data) {
+    req.body.data = JSON.parse(req.body.data)
+  }
+
+  //console.log(req.body);
+  //console.log(_.keys(req.body.data))
   return req.client.createProject(req.body)
   .then(function(result) {
     res.json(result);

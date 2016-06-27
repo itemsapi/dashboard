@@ -1,8 +1,8 @@
 {
   "name": "itemsapi-dashboard",
   "author": "Mateusz Rzepa",
-  "description": "ItemsAPI dashboard for managing items",
-  "version": "1.0.0",
+  "description": "ItemsAPI dashboard for managing items and visualizing data",
+  "version": "1.1.0",
   "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -31,19 +31,7 @@
     "jshint-stylish": "~0.1.3",
     "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.2.1",
-    "karma-ng-scenario": "~0.1.0",
     "grunt-karma": "~0.8.2",
-    "karma-script-launcher": "~0.1.0",
-    "karma-chrome-launcher": "~0.1.2",
-    "karma-firefox-launcher": "~0.1.3",
-    "karma-html2js-preprocessor": "~0.1.0",
-    "karma-jasmine": "~0.2.0",
-    "requirejs": "~2.1.10",
-    "karma-requirejs": "~0.2.1",
-    "karma-coffee-preprocessor": "~0.1.2",
-    "karma-phantomjs-launcher": "~0.1.1",
-    "karma": "~0.12.0",
-    "karma-ng-html2js-preprocessor": "~0.1.0",
     "grunt-ng-constant": "~1.1.0",
     "grunt-text-replace": "~0.3.11",
     "grunt-contrib-less": "~0.9.0"
@@ -52,17 +40,18 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "start": "PORT=3000 NODE_ENV=production node index.js",
+    "test": "grunt test",
+    "postinstall": "./node_modules/.bin/bower cache clean && ./node_modules/.bin/bower install"
   },
   "dependencies": {
-    "async": "^0.9.0",
     "bluebird": "^3.4.1",
     "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
     "express": "^4.14.0",
     "itemsapi": "^1.0.34",
     "itemsapi-node": "^1.0.14",
     "lodash": "^4.13.1",
-    "multer": "^1.1.0",
     "request": "^2.36.0",
     "type-detection": "^0.1.3"
   }
