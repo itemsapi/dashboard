@@ -40,8 +40,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "start": "PORT=3000 NODE_ENV=production node index.js",
-    "test": "grunt test",
+    "start": "node index.js",
     "postinstall": "./node_modules/.bin/bower cache clean && ./node_modules/.bin/bower install"
   },
   "dependencies": {
