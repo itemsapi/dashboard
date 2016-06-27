@@ -9,7 +9,12 @@ if (process.env.SEARCHBOX_URL) {
   ELASTICSEARCH_URL = process.env.SEARCHBOX_URL;
 }
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT;
+console.log(PORT);
+console.log(ELASTICSEARCH_URL);
+//console.log(__dirname);
+
+
 
 itemsapi.init({
   server: {
