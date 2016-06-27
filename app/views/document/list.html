@@ -79,8 +79,8 @@
                         <table class="table mb30">
                             <thead>
                                 <tr>
-                                    <th ng-repeat="n in metadata.table.fields | orderObjectBy: 'sort'">
-                                        {{ n.name }}
+                                    <th ng-repeat="n in metadata.keys">
+                                        {{ n }}
                                     </th>
                                     <th>Similar</th>
                                     <th>Details</th>
@@ -90,10 +90,10 @@
                             </thead>
                             <tbody>
                             <tr ng-repeat="(index, row) in rows">
-                                <td ng-repeat="n in metadata.table.fields">
-                                    <span ng-if="n.display === 'image'"><img style="max-height: 100px;" ng-src="{{ row[n.name] }}" /></span>
-                                    <span ng-if="n.display === 'string' || n.display === 'integer'">{{ row[n.name] }}</span>
-                                    <span ng-if="n.display === 'array'">{{ row[n.name].join(', ')}}{{  }}</span>
+                                <td ng-repeat="(key, n) in metadata.rows[0]">
+                                    <span ng-if="n.type === 'image'"><img style="max-height: 100px;" ng-src="{{ row[key] }}" /></span>
+                                    <span ng-if="n.type === 'string' || n.type === 'integer' || n.type === 'float'">{{ row[key] }}</span>
+                                    <span ng-if="n.type === 'array'">{{ row[key].join(', ')}}{{  }}</span>
                                 </td>
                                 <td>
                                 </td>
@@ -110,8 +110,6 @@
                             </tbody>
                         </table>
                         <div class="dataTables_info" id="table2_info">All elements: {{ pagination.count }}</div>
-                        <!--{{ pagination }}-->
-                        <!--<pagination class="pagination-sm" rotate="false" boundary-links="false" ng-model="pagination.page" total-items="pagination.count" items-per-page="pagination.limit" page="pagination.page"></pagination>-->
                         <pagination total-items="pagination.count" ng-model="pagination.page" class="pagination-md" ng-change="setPage(page)" boundary-links="true" rotate="true" items-per-page="pagination.limit" page="pagination.page" max-size="5"></pagination>
                     </div>
                     </div>

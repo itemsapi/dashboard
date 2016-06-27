@@ -63,6 +63,7 @@
     "itemsapi-node": "^1.0.14",
     "lodash": "^4.13.1",
     "multer": "^1.1.0",
-    "request": "^2.36.0"
+    "request": "^2.36.0",
+    "type-detection": "^0.1.3"
   }
 }

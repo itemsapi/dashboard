@@ -24,49 +24,13 @@ angular.module('itemsapi')
 
     var body = $scope.collection
 
-
     $http.post('/add-data', body, {}).then(function(res) {
       updateCollections()
       console.log(res);
     }, function(err) {
       console.log(err);
     });
-
-
-    /*var api = Restangular.one('add-data');
-    var headers = {}
-    var register = api.customPOST(body, '', {}, headers).then(function(data) {
-
-      console.log('fiin');
-    }, function(data) {
-    });*/
-
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   $scope.showMapping = function (name, size) {
 
@@ -94,7 +58,6 @@ angular.module('itemsapi')
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
-
 
 });
 

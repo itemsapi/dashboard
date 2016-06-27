@@ -14,7 +14,7 @@
 <section class="content">
     <div class="row">
         <div class="col-sm-12">
-            <h5 class="subtitle mb5">DEMO Collections</h5>
+            <h5 class="subtitle mb5">Collections list</h5>
             <div class="box">
                 <div class="box-body table-responsive no-padding">
                     <table class="table">
@@ -40,31 +40,10 @@
         </div>
     </div>
 
-    <!--<div class="row">
-        <div class="col-sm-12">
-            <h5 class="subtitle">Your collections</h5>
-            <div class="box">
-                <div class="box-body table-responsive no-padding">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Count</th>
-                                <th>All items</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
     <div class="row">
       <div class="col-md-6">
 
-        <div class="box box-warning">
+        <div class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Add collection</h3>
           </div>
@@ -85,7 +64,7 @@
               <!-- textarea -->
               <div class="form-group">
                 <label>Items (json)</label>
-                <textarea name="data" class="form-control" rows="3" placeholder="Raw data"></textarea>
+                <textarea name="data" ng-model="collection.data" class="form-control" rows="3" placeholder="Raw data"></textarea>
               </div>
 
               <div class="box-footer">

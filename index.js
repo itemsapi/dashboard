@@ -34,6 +34,7 @@ itemsapi.init({
 var app = itemsapi.get('express');
 var path = require('path')
 var _ = require('lodash')
+var ui = require('./src/helpers/ui')
 //var ItemsAPI = require('itemsapi-node');
 
 var ITEMSAPI_URL = 'http://localhost:4000/api/v1';
@@ -58,15 +59,25 @@ app.get('/', function(req, res) {
 });
 
 app.post('/add-data', function(req, res) {
-  console.log('add data');
-  return req.client.createProject({
+  /*return req.client.createProject({
     url: req.body.url
-  })
+  })*/
+  return req.client.createProject(req.body)
   .then(function(result) {
     res.json(result);
   })
 });
 
+app.get('/metadata', function(req, res) {
+  req.client.setName(req.query.name)
+  return req.client.search({
+  })
+  .then(function(result) {
+    var items = result.data.items
+    var mapping = ui.generateTable(items)
+    res.json(mapping);
+  })
+});
 
 
 itemsapi.start(function serverStart(serverInstance) {
