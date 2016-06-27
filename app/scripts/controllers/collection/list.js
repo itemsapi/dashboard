@@ -13,6 +13,8 @@ angular.module('itemsapi')
     });
   }
 
+  $scope.submitText = 'Submit'
+
   updateCollections()
 
   $scope.animationsEnabled = true;
@@ -21,14 +23,17 @@ angular.module('itemsapi')
 
   $scope.submit = function () {
     var body = $scope.collection
-
+    $scope.submitText = 'Processing...'
     $http.post('/add-data', body, {}).then(function(res) {
       $timeout(function() {
+        $scope.submitText = 'Submit'
         $state.go('documents', {name: res.data.name}, {location: 'replace'})
       }, 1000);
 
       console.log(res);
     }, function(err) {
+      $scope.submitText = 'Submit'
+      alert(err)
       console.log(err);
     });
   }

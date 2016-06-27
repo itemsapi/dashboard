@@ -68,7 +68,7 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-info pull-right" style="margin-left: 5px;">Add</button>
+                <button type="submit" ng-disabled="submitText !== 'Submit'" class="btn btn-info pull-right" style="margin-left: 5px;">{{ submitText }}</button>
               </div>
 
             </form>
