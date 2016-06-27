@@ -6,12 +6,67 @@ angular.module('itemsapi')
   $scope.rows = [];
 
   var api = Restangular.all('collections');
-  api.getList({}).then(function(data) {
-    $scope.rows = data.data.items;
-    $scope.pagination = data.pagination;
-  });
+  var updateCollections = function() {
+    api.getList({}).then(function(data) {
+      $scope.rows = data.data.items;
+      $scope.pagination = data.pagination;
+    });
+  }
+
+  updateCollections()
 
   $scope.animationsEnabled = true;
+
+  $scope.collection = {}
+
+  $scope.submit = function () {
+    console.log($scope.collection);
+
+    var body = $scope.collection
+
+
+    $http.post('/add-data', body, {}).then(function(res) {
+      updateCollections()
+      console.log(res);
+    }, function(err) {
+      console.log(err);
+    });
+
+
+    /*var api = Restangular.one('add-data');
+    var headers = {}
+    var register = api.customPOST(body, '', {}, headers).then(function(data) {
+
+      console.log('fiin');
+    }, function(data) {
+    });*/
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   $scope.showMapping = function (name, size) {
 
