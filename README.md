@@ -44,6 +44,11 @@ Open http://localhost:3000 in your browser
 
 - http://app.itemsapi.com/
 
+## Example data
+
+- https://github.com/itemsapi/itemsapi-example-data/tree/master/items
+- https://raw.githubusercontent.com/itemsapi/itemsapi-example-data/master/items/restaurants.json
+
 ## Contribution
 
 This is early stage of the dashboard. There is still lot of works, improvements. If you want to help you can:
