@@ -1,6 +1,12 @@
 # ItemsAPI dashboard
 
-ItemsAPI dashboard is fast angular.js web application for managing items and demo purpose.
+This project is an angular.js dashboard for <a href="https://www.itemsapi.com" target="_blank">ItemsAPI</a>.  
+
+Initially it was mostly for demo purposes but now it allows you to:
+- create your own search api by providing json data
+- search and manage your items
+- integrate with heroku easily
+
 
 ## Requirement
 
