@@ -7,6 +7,8 @@ Initially it was mostly for demo purposes but now it allows you to:
 - search and manage your items
 - integrate with heroku easily
 
+![](https://media.giphy.com/media/1iYG1Zaf12Yrk6T6/giphy.gif)
+
 
 ## Requirement
 
