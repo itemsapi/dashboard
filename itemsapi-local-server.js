@@ -14,7 +14,7 @@ itemsapi.init({
   server: {
     port: PORT,
     host: "0.0.0.0",
-    logging_level: 'debug',
+    logging_level: 'info',
     logger: false
   },
   elasticsearch: {
