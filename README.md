@@ -7,7 +7,7 @@ Initially it was mostly for demo purposes but now it allows you to:
 - search and manage your items
 - integrate with heroku easily
 
-Info from creator: this dashboard can be very powerful because it allows you to add and search / filter data instantly.
+***Info from creator***: this dashboard can be very powerful because it allows you to add and search / filter data instantly.
 Developing and maintaining it is not my top prority anyway. I'd like to focus on core ItemsAPI https://github.com/itemsapi/itemsapi. If you like UX and frontend side and want to make it more useful feel free to make contribution! Matt
 
 
