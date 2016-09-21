@@ -58,7 +58,7 @@ Run with your Elasticsearch instance
 $ PORT=3000 npm start
 ```
 
-Run with your remote backend url
+Run with your remote backend url (it automatically gets collections from http://cloud.itemsapi.com/api/v1/collections)
 
 ```bash
 $ BACKEND_URL=http://cloud.itemsapi.com PORT=3000 npm start
