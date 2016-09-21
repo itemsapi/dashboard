@@ -4,8 +4,8 @@ var itemsapi = require('itemsapi');
 
 var ELASTICSEARCH_URL = '127.0.0.1:9200';
 // heroku elasticsearch addon
-if (process.env.SEARCHBOX_URL) {
-  ELASTICSEARCH_URL = process.env.SEARCHBOX_URL;
+if (process.env.SEARCHBOX_URL || process.env.ELASTICSEARCH_URL) {
+  ELASTICSEARCH_URL = process.env.SEARCHBOX_URL || process.env.ELASTICSEARCH_URL;
 }
 
 var PORT = process.env.PORT || 3000;
@@ -14,6 +14,7 @@ itemsapi.init({
   server: {
     port: PORT,
     host: "0.0.0.0",
+    logging_level: 'debug',
     logger: false
   },
   elasticsearch: {
