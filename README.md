@@ -20,19 +20,21 @@ Initially it was mostly for demo purposes but now it allows you to:
 
 ## Installation (ubuntu 14.04)
 
-Clone ItemsAPI Dashboard repository from github:
-
-```bash
-$ git clone https://github.com/itemsapi/dashboard.git
-```
 
 Node.js:
 ```bash
 $ sudo apt-get install curl
 $ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
-$ sudo npm update npm -g
+$ sudo npm install npm@3.8.6 -g
 ```
+
+Clone ItemsAPI Dashboard repository from github:
+```bash
+$ git clone https://github.com/itemsapi/dashboard.git
+$ cd dashboard
+```
+
 
 local npm packages (in your project directory):
 it will install bower packages as well
@@ -43,7 +45,7 @@ $ npm install --production
 ## Configuration and Run
 
 ```bash
-$ npm start
+$ PORT=3000 npm start
 ```
 
 Open http://localhost:3000 in your browser
