@@ -52,11 +52,19 @@ $ npm install --production
 
 ## Configuration and Run
 
+Run with your Elasticsearch instance
+
 ```bash
 $ PORT=3000 npm start
 ```
 
-Open http://localhost:3000 in your browser
+Run with your remote backend url
+
+```bash
+$ BACKEND_URL=http://cloud.itemsapi.com PORT=3000 npm start
+```
+
+Open http://localhost:3000 in your browser to check results
 
 
 ## Example data
