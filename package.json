@@ -49,8 +49,8 @@
     "bower": "^1.7.9",
     "express": "^4.14.0",
     "express-http-proxy": "^0.10.0",
-    "itemsapi": "^1.0.34",
-    "itemsapi-node": "^1.0.14",
+    "itemsapi": "^1.0.47",
+    "itemsapi-node": "^1.0.15",
     "lodash": "^4.13.1",
     "request": "^2.36.0",
     "type-detection": "^0.1.3"
