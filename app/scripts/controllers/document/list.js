@@ -124,7 +124,7 @@ angular.module('itemsapi')
 
   $scope.removeItem = function(index) {
     var id = $scope.rows[index].id;
-    Restangular.one(name + '/' + id).remove()
+    Restangular.one('items/' + name + '/' + id).remove()
     .then(function(res) {
       $scope.rows = _.reject($scope.rows, function(val) {
         return val.id == id;
