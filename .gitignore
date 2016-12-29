@@ -5,6 +5,7 @@ distprocessing
 .tmp
 .sass-cache
 app/bower_components
+Test
 .htaccess
 nohup.out
 selenium-server.jar
